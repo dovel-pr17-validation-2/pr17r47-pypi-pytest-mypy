@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools >= 80", "setuptools-scm >= 8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pytest-mypy"
+dynamic = ["version"]
+description = "A Pytest Plugin for Mypy"
+readme = "README.rst"
+license = {file = "LICENSE"}
+maintainers = [
+    {name = "David Tucker", email = "david@tucker.name"}
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Framework :: Pytest",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: 3.15",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Topic :: Software Development :: Testing",
+]
+requires-python = ">= 3.10"
+dependencies = [
+    "filelock >= 3.0",
+    "mypy >= 1.0",
+    "pytest >= 7.0",
+]
+
+[project.entry-points.pytest11]
+mypy = "pytest_mypy"
+
+[project.urls]
+homepage = "https://github.com/realpython/pytest-mypy"
+
+[tool.isort]
+profile = "black"
+
+[tool.setuptools_scm]
